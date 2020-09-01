@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', arial;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: $body;
+    color: $color-tretiary;
+    padding: 5% 10%;
+}
+
+.container {
+    max-width: 1340px;
+    margin: auto;
+    padding: 0 15px;
+}

@@ -1,0 +1,95 @@
+@import '../variables';
+
+.outer-chat {
+    height: 100%;
+    .chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 8px;
+        height: 100%;
+        width: 100%;
+        .chatbox-header {
+            background: $color-secondary;
+            display: flex;
+            width: 100%;
+            text-transform: capitalize;
+            padding: 0 30px;
+            .chatbox-title {
+                flex: 4;
+                h2 {
+                    font-weight: normal;
+                    .room {
+                        font-weight: bold;
+                        color: rgba($color-tretiary, .5);
+                    }
+                }
+            }
+            .chatbox-close {
+                flex: 1;
+                text-align: right;
+                a {
+                    color: $color-tretiary;
+                    text-decoration: none;
+                    padding: 20px;
+                    line-height: 4.5;
+                    &:hover, &:focus {
+                        color: rgba($color-tretiary, .6)
+                    }
+                }
+            }
+        }
+        .form {
+            display: flex;
+            border-top: 2px solid #d3d3d3;
+            input {
+                height: 40px;
+                width: 90%;
+                border: none;
+                padding: 0 15px;
+                transition: .2s all;
+                &:focus {
+                    outline: none;
+                    background: rgba($color-tretiary, .9);
+                }
+            }
+            button {
+                width: 10%;
+                border: none;
+                transition: .2s all;
+                &:focus {
+                    outline: none;
+                    background: rgba($color-tretiary, .9);
+                }
+            }
+        }
+        .messages {
+            overflow: auto;
+            flex: auto;
+
+            .admin-message {
+                .admin-text {
+                    text-align: center;
+                    color: rgba($color-tretiary, .5);
+                }
+            }
+            .message-container {
+                display: flex;
+                margin: 0 30px;
+
+                .message-text {
+                    word-break: break-word;
+                }
+            }
+            .not-cur-user {
+                .user {
+                    margin-right: 10px;
+                    color: $color-colored;
+                }
+            }
+            .cur-user {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
