@@ -1,6 +1,20 @@
-$color-primary: #212121;
-$color-secondary: #263238;
-$color-tretiary: #fafafa;
-$color-colored: #00e676;
+$color-primary: #ddd;
+$color-secondary: gainsboro;
+$color-tretiary: #212121;
+$color-colored: #dddd14;
+$color-chat: #642b73;
 
-$body: linear-gradient(to top, #494975, #20203d);
+.body-bg {
+    background: #642B73;  /* fallback for old browsers */
+    background: linear-gradient(78deg, #642b73, #c6426e);
+    background-size: 400% 400%;
+
+    animation: bg-move 24s ease infinite;
+}
+
+
+@keyframes bg-move {
+    0%{background-position:64% 0%}
+    50%{background-position:37% 100%}
+    100%{background-position:64% 0%}
+}

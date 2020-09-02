@@ -9,13 +9,38 @@ html, body {
 }
 
 body {
-    background: $body;
-    color: $color-tretiary;
-    padding: 5% 10%;
+    @extend .body-bg;
+    color: $color-primary;
+    padding: 5% 20%;
 }
 
 .container {
     max-width: 1340px;
     margin: auto;
     padding: 0 15px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 5px 0;
+    color: rgba($color-primary, .6);
+    span {
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    body {
+        padding: 31px 0 0 0 !important;
+    }
+    footer {
+        top: 0; bottom: auto;
+    }
+    .outer-chat {
+        border-radius: 0;
+    }
 }

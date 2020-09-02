@@ -11,8 +11,8 @@ const ChatBoxInput = ({ message, setMessage, sendMessage }) => (
             event.key === "Enter" ? sendMessage(event) : null
         }
         />
-    <button className="sendButton" onClick={(e) => sendMessage(e)}>
-      Send
+    <button type="submit" className="sendButton" onClick={(e) => sendMessage(e)}>
+      ➤
     </button>
   </form>
 );
