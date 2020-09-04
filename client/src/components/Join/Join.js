@@ -24,7 +24,7 @@ const Join = () => {
                         <label htmlFor="room">Pokój</label>
                         <input title="Numer lub nazwa pokoju" required maxLength="6" id="room" type="text" onChange={(e) => setRoom(e.target.value) } />
                     </div>
-                    <Link onKeyPress={e => (!name || !room) ? e.preventDefault() : null} onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
+                    <Link  onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
                         <button title='Dołącz do pokoju}' className="btn" type="submit">Dołącz do pokoju: <span>{room}</span></button>
                     </Link>
                 </form>

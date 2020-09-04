@@ -15,8 +15,8 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-      // const ENDPOINT = 'localhost:5000';
-      const ENDPOINT = "https://uch4t.herokuapp.com/";
+      const ENDPOINT = 'localhost:5000';
+      // const ENDPOINT = "https://uch4t.herokuapp.com/";
 
     useEffect(() => {
       const { name, room } = queryString.parse(location.search);
@@ -26,8 +26,11 @@ const Chat = ({ location }) => {
       setName(name);
       setRoom(room);
 
-      socket.emit('join', { name, room }, () => {
 
+      socket.emit('join', { name, room }, (error) => {
+        if(error) {
+          window.location.href = '/';
+        }
       });
 
       return () => {
@@ -44,6 +47,10 @@ const Chat = ({ location }) => {
 
       socket.on("roomData", ({ users }) => {
         setUsers(users);
+      });
+
+      socket.on("redirect", (destination) => {
+        window.location.href = destination;
       });
     }, []);
 

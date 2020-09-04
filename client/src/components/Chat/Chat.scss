@@ -51,12 +51,21 @@
         .form {
             display: flex;
             border-top: 2px solid #d3d3d3;
-            input {
-                height: 40px;
+            textarea {
+                height: 50px;
                 width: 90%;
                 border: none;
-                padding: 0 15px;
+                padding: 5px 15px;
                 transition: .2s all;
+                background: $color-tretiary;
+                font-family: $font-default;
+                flex-grow: 1;
+                color: $color-primary;
+                vertical-align: middle;
+                resize: none;
+                &::-webkit-textarea-placeholder {
+                    color: $color-secondary;
+                }
                 &:focus {
                     outline: none;
                     background: rgba($color-tretiary, .6);
@@ -89,7 +98,8 @@
                     text-align: center;
                     color: rgba($color-secondary, .4);
                     font-size: .85em;
-                    margin: .5em 0;
+                    margin: 0;
+                    cursor: context-menu;
                     text-transform: uppercase;
                 }
             }
@@ -130,11 +140,15 @@
                 margin-top: 5px;
                 text-align: center;
                 display: flex;
+                flex-wrap: wrap;
+                max-width: 100%;
+                overflow-x: hidden;
                 text-align: center;
                 color: rgba(220, 220, 220, 0.4);
                 font-size: .85em;
                 text-transform: uppercase;
-                display: block;
+                justify-content: center;
+                cursor: context-menu;
                 p {
                     margin: 0;
                 }
@@ -157,10 +171,20 @@
     }
 }
 
-// colors
-$input-background: #333;
-$input-text-inactive: #7881A1;
-$input-text-active: #BFD2FF;
+@media screen and (max-width: 568px) {
+    .outer-chat {
+        font-size: .9em !important;
+        .chatbox-header {
+            padding: 0 10px !important;
+        }
+        .user {
+            margin-left: 0 !important;
+        }
+        .message-container {
+            margin: 5px 10px !important;
+        }
+    }
+}
 
 // gradient animation
 @keyframes gradient { 
@@ -175,13 +199,13 @@ $input-text-active: #BFD2FF;
   width: 100%;
   margin: 0 auto;
   border-radius: 2px;
-  background: $input-background;
+  background: #333;
   &:after {
     content: "";
     position: absolute;
     left: 0px;
     right: 0px;
-    top: -3px;
+    top: -4px;
     z-index: 999;
     height: 4px;
     border-bottom-left-radius: 2px;
@@ -193,19 +217,8 @@ $input-text-active: #BFD2FF;
   }
 }
 
-.form input {
-background: #444;
-  flex-grow: 1;
-  color: $color-primary;
-  line-height: 2.4rem;
-  vertical-align: middle;
-  &::-webkit-input-placeholder {
-    color: $color-secondary;
-  }
-}
-
 .form button {
   &:hover {
-    color: $input-text-active;
+    color: $color-secondary;
   }
 }
