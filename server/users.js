@@ -8,8 +8,11 @@ const addUser = ({ id, name, room }) => {
     (user) => user.room === room && user.name === name
   );
 
+  // Validation
   if (!name || !room) return { error: "Username and room are required." };
   if (existingUser) return { error: "Username is taken." };
+  if (name.length > 22) return { error: "Username is too long" };
+  if (room.length > 3) return { error: "Wrong room number" };
 
   const user = { id, name, room };
 

@@ -146,6 +146,13 @@ footer span {
   margin: auto;
 }
 
+#root .join-outer .join-inner .join-wrapper .status {
+  color: red;
+  bottom: 0;
+  margin: 0;
+  height: 25px;
+}
+
 #root .join-outer .join-inner .join-wrapper div {
   display: -webkit-box;
   display: -ms-flexbox;

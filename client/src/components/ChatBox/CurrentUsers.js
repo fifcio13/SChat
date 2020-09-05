@@ -6,7 +6,7 @@ const CurrentUsers = ({ users }) => (
             users
                 ? (
                     <div className="current-users">
-                        <span className="users">Aktywne osoby ({users.length}): </span>
+                        <span className="users">Active users ({users.length}): </span>
                                 {users.map(({ name }) => (
                                     <span key={name}>
                                         {name}

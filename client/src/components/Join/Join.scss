@@ -28,6 +28,12 @@
                 gap: 3em;
                 width: 27%;
                 margin: auto;
+                .status {
+                    color: red;
+                    bottom: 0;
+                    margin: 0;
+                    height: 25px;
+                }
                 div {
                     display: flex;
                     flex-direction: column;

@@ -30,6 +30,7 @@ const Chat = ({ location }) => {
       socket.emit('join', { name, room }, (error) => {
         if(error) {
           window.location.href = '/';
+          alert(error);
         }
       });
 
@@ -47,10 +48,6 @@ const Chat = ({ location }) => {
 
       socket.on("roomData", ({ users }) => {
         setUsers(users);
-      });
-
-      socket.on("redirect", (destination) => {
-        window.location.href = destination;
       });
     }, []);
 
