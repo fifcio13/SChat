@@ -37,7 +37,7 @@
                 div {
                     display: flex;
                     flex-direction: column;
-                    gap: .5em;
+                    gap: .3em;
                 }
                 h1 {
                     position: absolute;
@@ -53,22 +53,28 @@
                     font-size: 3rem;
                 }
                 label {
+                    font-size: .9em;
+                    text-transform: uppercase;
+                    letter-spacing: .9px;
                     color: $color-secondary;
                 }
                 input {
                     border: none;
-                    background: #ffffff45;
+                    $background: #ffffff91;
+                    background: $background;
                     padding: 10px;
-                    color: $color-secondary;
+                    color: $color-tretiary;
                     width: 100%;
+                    transition: .3s all;
                     &#room {
-                        width: 100px;
+                        width: 58px;
                         margin: auto;
+                        text-align: center;
                     }
                     &:focus {
                         outline: none;
-                        margin-bottom: -1px;
-                        border-bottom: 1px inset $color-primary;
+                        color: $color-secondary !important;
+                        background: #ffffff66;
                     }
                     &::placeholder {
                         color: #333;
@@ -90,9 +96,13 @@
                     text-transform: uppercase;
                     font-size: .8em;
                     border: 1px solid $color-secondary;
+                    transition: .3s all;
+                    &.active {
+                        background: $color-tretiary;
+                    }
                     &:focus {
                         outline: none;
-                        box-shadow: 1px 1px 25px 10px rgba($color-colored, 0.4);
+                        box-shadow: 1px 1px 25px 10px rgba($color-colored, .4);
                     }
                     &::before {
                         content: "";
@@ -104,7 +114,7 @@
                         background: linear-gradient(
                             120deg,
                             transparent,
-                            rgba($color-colored, 0.4),
+                            rgba($color-colored, .4),
                             transparent
                         );
                         transition: all 650ms;
@@ -114,7 +124,8 @@
                     }
                     span {
                         color: $color-colored;
-                        font-weight: bold;
+                        font-weight: 800;
+                        letter-spacing: .5px;
                     }
                 }
             }

@@ -1,10 +1,11 @@
 .body-bg, body {
-  background: #642B73;
+  background: #0F2027;
   /* fallback for old browsers */
-  background: linear-gradient(78deg, #642b73, #c6426e);
+  background: -webkit-gradient(linear, left top, right top, from(#2C5364), color-stop(#203A43), to(#0F2027));
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   background-size: 400% 400%;
-  -webkit-animation: bg-move 24s ease infinite;
-          animation: bg-move 24s ease infinite;
+  -webkit-animation: bg-move 10s ease infinite;
+          animation: bg-move 10s ease infinite;
 }
 
 @-webkit-keyframes bg-move {
@@ -34,6 +35,16 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background: #642b73;
+  color: #ddd;
+}
+
+*::selection {
+  background: #642b73;
+  color: #ddd;
 }
 
 html, body {
@@ -161,13 +172,13 @@ footer span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: .5em;
+  gap: .3em;
 }
 
 #root .join-outer .join-inner .join-wrapper h1 {
   position: absolute;
   top: -66px;
-  border-bottom: 2px solid #dddd14;
+  border-bottom: 2px solid #642b73;
   background: inherit;
   right: 0;
   left: 0;
@@ -179,26 +190,32 @@ footer span {
 }
 
 #root .join-outer .join-inner .join-wrapper label {
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: .9px;
   color: gainsboro;
 }
 
 #root .join-outer .join-inner .join-wrapper input {
   border: none;
-  background: #ffffff45;
+  background: #ffffff91;
   padding: 10px;
-  color: gainsboro;
+  color: #212121;
   width: 100%;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
 #root .join-outer .join-inner .join-wrapper input#room {
-  width: 100px;
+  width: 58px;
   margin: auto;
+  text-align: center;
 }
 
 #root .join-outer .join-inner .join-wrapper input:focus {
   outline: none;
-  margin-bottom: -1px;
-  border-bottom: 1px inset #ddd;
+  color: gainsboro !important;
+  background: #ffffff66;
 }
 
 #root .join-outer .join-inner .join-wrapper input::-webkit-input-placeholder {
@@ -219,8 +236,8 @@ footer span {
 
 #root .join-outer .join-inner .join-wrapper a:focus {
   outline: none;
-  -webkit-box-shadow: 1px 1px 25px 10px rgba(221, 221, 20, 0.4);
-          box-shadow: 1px 1px 25px 10px rgba(221, 221, 20, 0.4);
+  -webkit-box-shadow: 1px 1px 25px 10px rgba(100, 43, 115, 0.4);
+          box-shadow: 1px 1px 25px 10px rgba(100, 43, 115, 0.4);
 }
 
 #root .join-outer .join-inner .join-wrapper button {
@@ -235,12 +252,18 @@ footer span {
   text-transform: uppercase;
   font-size: .8em;
   border: 1px solid gainsboro;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+#root .join-outer .join-inner .join-wrapper button.active {
+  background: #212121;
 }
 
 #root .join-outer .join-inner .join-wrapper button:focus {
   outline: none;
-  -webkit-box-shadow: 1px 1px 25px 10px rgba(221, 221, 20, 0.4);
-          box-shadow: 1px 1px 25px 10px rgba(221, 221, 20, 0.4);
+  -webkit-box-shadow: 1px 1px 25px 10px rgba(100, 43, 115, 0.4);
+          box-shadow: 1px 1px 25px 10px rgba(100, 43, 115, 0.4);
 }
 
 #root .join-outer .join-inner .join-wrapper button::before {
@@ -250,7 +273,7 @@ footer span {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(221, 221, 20, 0.4), transparent);
+  background: linear-gradient(120deg, transparent, rgba(100, 43, 115, 0.4), transparent);
   -webkit-transition: all 650ms;
   transition: all 650ms;
 }
@@ -260,8 +283,9 @@ footer span {
 }
 
 #root .join-outer .join-inner .join-wrapper button span {
-  color: #dddd14;
-  font-weight: bold;
+  color: #642b73;
+  font-weight: 800;
+  letter-spacing: .5px;
 }
 
 @media screen and (max-width: 1200px) {

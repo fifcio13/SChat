@@ -1,16 +1,15 @@
 $color-primary: #ddd;
 $color-secondary: gainsboro;
 $color-tretiary: #212121;
-$color-colored: #dddd14;
-$color-chat: #642b73;
+$color-colored: #642b73;
 
 $font-default: 'Segoe UI', arial;
 
 .body-bg {
-    background: #642B73;  /* fallback for old browsers */
-    background: linear-gradient(78deg, #642b73, #c6426e);
+    background: #0F2027;  /* fallback for old browsers */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background-size: 400% 400%;
-    animation: bg-move 24s ease infinite;
+    animation: bg-move 10s ease infinite;
 }
 
 

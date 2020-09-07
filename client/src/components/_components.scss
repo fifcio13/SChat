@@ -1,5 +1,10 @@
 * {
     box-sizing: border-box;
+
+    &::selection {
+        background: $color-colored;
+        color: $color-primary;
+    }
 }
 
 html, body {
@@ -70,3 +75,4 @@ footer {
         border-radius: 0 !important;
     }
 }
+

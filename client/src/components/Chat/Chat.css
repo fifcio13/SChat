@@ -1,11 +1,12 @@
 @charset "UTF-8";
 .body-bg {
-  background: #642B73;
+  background: #0F2027;
   /* fallback for old browsers */
-  background: linear-gradient(78deg, #642b73, #c6426e);
+  background: -webkit-gradient(linear, left top, right top, from(#2C5364), color-stop(#203A43), to(#0F2027));
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   background-size: 400% 400%;
-  -webkit-animation: bg-move 24s ease infinite;
-          animation: bg-move 24s ease infinite;
+  -webkit-animation: bg-move 10s ease infinite;
+          animation: bg-move 10s ease infinite;
 }
 
 @-webkit-keyframes bg-move {
@@ -54,19 +55,19 @@
   border-radius: 8px;
   height: 100%;
   width: 100%;
-  background: rgba(33, 33, 33, 0.6);
+  background: rgba(33, 33, 33, 0.76);
 }
 
 .outer-chat .chat .chatbox-header {
-  background: gainsboro;
+  background: #212121;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   text-transform: capitalize;
   padding: 0 30px;
-  -webkit-box-shadow: 0 -7px 12px 0px gainsboro;
-          box-shadow: 0 -7px 12px 0px gainsboro;
+  -webkit-box-shadow: 0 -15px 12px 0px #212121;
+          box-shadow: 0 -15px 12px 0px #212121;
 }
 
 .outer-chat .chat .chatbox-header .chatbox-title {
@@ -77,12 +78,12 @@
 
 .outer-chat .chat .chatbox-header .chatbox-title h2 {
   font-weight: normal;
-  color: #212121;
+  color: gainsboro;
 }
 
 .outer-chat .chat .chatbox-header .chatbox-title h2 .room {
   font-weight: bold;
-  color: rgba(33, 33, 33, 0.4);
+  color: rgba(221, 221, 221, 0.4);
 }
 
 .outer-chat .chat .chatbox-header .chatbox-close {
@@ -94,7 +95,7 @@
 }
 
 .outer-chat .chat .chatbox-header .chatbox-close a {
-  color: #212121;
+  color: gainsboro;
   text-decoration: none;
   padding: 15px;
   font-weight: bold;
@@ -202,7 +203,7 @@
 
 .outer-chat .chat .messages .not-cur-user .user {
   margin-right: 10px;
-  color: #dddd14;
+  color: #642b73;
   margin: 10px 10px 0 10px;
 }
 
@@ -256,7 +257,7 @@
 .outer-chat .chat .messages .current-users span:nth-child(n+3)::before {
   content: '•';
   margin-right: 5px;
-  color: rgba(221, 221, 20, 0.6);
+  color: rgba(100, 43, 115, 0.6);
 }
 
 @media screen and (max-width: 568px) {

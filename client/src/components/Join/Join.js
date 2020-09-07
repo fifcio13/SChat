@@ -22,12 +22,22 @@ const Join = () => {
         }
     }
 
+    const IsActive = () => (
+        <button 
+        onClick={(e) => handleClick()} 
+        title='Join the room' 
+        className={`btn ${!room || !name ? "disabled" : "active"}`} 
+        type="submit">
+        Join the room: <span>{room}</span>
+        </button>
+    )
+
     return (
         <div className="join-outer">
         <Social />
             <div className="join-inner">
                 <form className="join-wrapper" >
-                    <h1>UChat</h1>
+                    <h1>SChat</h1>
                     <div>
                         <label htmlFor="name">Username</label>
                         <input title="Your username on chat" required maxLength="22" id="name" type="text" onChange={(e) => setName(e.target.value) } />
@@ -37,7 +47,7 @@ const Join = () => {
                         <input title="Number of a room" required maxLength="3" id="room" type="text" onChange={(e) => setRoom(e.target.value) } />
                     </div>
                     <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-                        <button onClick={(e) => handleClick()} title='Join the room' className='btn ' type="submit">Join the room: <span>{room}</span></button>
+                        <IsActive />
                     </Link>
                     <p className="status">{status}</p>
                 </form>
