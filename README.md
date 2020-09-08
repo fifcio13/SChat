@@ -3,6 +3,8 @@
 
 [Live site](https://5f5694129e0e9782934f3f0d--uchaat.netlify.app/)
 
+![SChat layout](https://raw.githubusercontent.com/fifcio13/fifcio13.github.io/master/gfx/layouts/schat-layout.png)
+
 ### Used technologies
 ##### Backend:
 - Socket.io
